@@ -3,6 +3,8 @@
 
 Storm is a terminal-grade, real-time weather application that fetches atmospheric data from the OpenWeatherMap API and presents it in a modular, highly-performant Streamlit interface.
 
+**Live Demo:** [stormweb.streamlit.app](https://stormweb.streamlit.app/)
+
 ![Tiger Analytics](https://img.shields.io/badge/Tiger--Analytics-Mini--Project-orange)
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.31+-ff4b4b)
@@ -58,7 +60,7 @@ weather_app/
 ## 7. Installation & Setup
 ```bash
 # 1. Clone & navigate
-git clone <repo-url> && cd TA-WeatherApp
+git clone https://github.com/TeamMavericKX/Storm4TA.git && cd TA-WeatherApp
 
 # 2. Install dependencies
 pip install -r requirements.txt
