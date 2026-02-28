@@ -3,10 +3,7 @@ Configuration — Storm Weather Terminal
 """
 import os
 
-API_KEY: str = os.environ.get(
-    "OPENWEATHER_API_KEY",
-    "b3c79e9f1b5de32df6b35fc5f1f07037",
-)
+API_KEY: str = os.environ.get("OPENWEATHER_API_KEY", "")
 BASE_URL: str = "https://api.openweathermap.org/data/2.5/weather"
 FORECAST_URL: str = "https://api.openweathermap.org/data/2.5/forecast"
 UNITS: str = "metric"
