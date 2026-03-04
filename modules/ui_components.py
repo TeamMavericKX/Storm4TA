@@ -1,7 +1,7 @@
 """
 UI Components — Storm v2
-Terminal-grade aesthetic. No gradients. Pure darkness + lime accent.
-Matching the portfolio's design DNA exactly.
+Terminal-grade aesthetic. No gradients. Pure darkness + Tiger Orange accent.
+Matching the Tiger Analytics design DNA exactly.
 """
 import streamlit as st
 from modules.utils import (
@@ -30,15 +30,17 @@ def inject_custom_css() -> None:
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap');
     /* ═══ VARIABLES ═══ */
     :root {
-        --accent: #bef264;
-        --accent-rgb: 190,242,100;
-        --accent-dim: rgba(190,242,100,0.15);
-        --accent-glow: rgba(190,242,100,0.25);
+        --accent: #f05a28;
+        --accent-rgb: 240, 90, 40;
+        --accent-dim: rgba(240, 90, 40, 0.15);
+        --accent-glow: rgba(240, 90, 40, 0.25);
+        --status-online: #ae3014;
+        --status-online-rgb: 174, 48, 20;
         --bg: #050505;
         --bg-card: rgba(255,255,255,0.02);
         --bg-card-hover: rgba(255,255,255,0.05);
         --border: rgba(255,255,255,0.08);
-        --border-hover: rgba(190,242,100,0.3);
+        --border-hover: rgba(240, 90, 40, 0.3);
         --text-primary: #fafafa;
         --text-secondary: #a3a3a3;
         --text-muted: #525252;
@@ -229,7 +231,7 @@ def inject_custom_css() -> None:
     }
     .status-dot {
         width: 6px; height: 6px;
-        background: var(--accent);
+        background: var(--status-online);
         border-radius: 50%;
         animation: pulse 2s infinite;
         display: inline-block;
@@ -302,7 +304,7 @@ def inject_custom_css() -> None:
     }
     .city-country .dot {
         width: 6px; height: 6px;
-        background: var(--accent);
+        background: var(--status-online);
         border-radius: 50%;
         animation: pulse 2s infinite;
     }
@@ -326,7 +328,7 @@ def inject_custom_css() -> None:
         font-family: var(--font-mono);
         font-size: 0.8rem;
     }
-    .temp-high { color: #f87171; font-weight: 500; }
+    .temp-high { color: var(--accent); font-weight: 500; }
     .temp-low { color: #67e8f9; font-weight: 500; }
     .weather-emoji {
         font-size: 5.5rem;
@@ -564,7 +566,7 @@ def inject_custom_css() -> None:
         font-family: var(--font-display);
         font-size: 1rem;
     }
-    .forecast-hi { color: #f87171; font-weight: 700; }
+    .forecast-hi { color: var(--accent); font-weight: 700; }
     .forecast-lo { color: #67e8f9; font-weight: 500; }
     .forecast-cond {
         font-family: var(--font-mono);
@@ -611,8 +613,8 @@ def inject_custom_css() -> None:
     .welcome-hint .accent { color: var(--accent); }
     /* ═══ ERROR ═══ */
     .error-card {
-        background: rgba(239,68,68,0.05);
-        border: 1px solid rgba(239,68,68,0.2);
+        background: rgba(var(--accent-rgb), 0.05);
+        border: 1px solid rgba(var(--accent-rgb), 0.2);
         border-radius: var(--radius);
         padding: 3rem;
         text-align: center;
@@ -623,7 +625,7 @@ def inject_custom_css() -> None:
         font-family: var(--font-display);
         font-size: 1.2rem;
         font-weight: 700;
-        color: #f87171;
+        color: var(--accent);
         margin-bottom: 0.5rem;
     }
     .error-msg {
